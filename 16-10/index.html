@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,18 @@
     <title>Bolleoppskrifter</title>
 </head>
     <body>
+        <div id="grid-container">
         <header>
             <nav>
-                <a href="£" id="logo">Logo</a>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-bars"></i>
-                <ul>
+                <a href="#" id="logo">Logo</a>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i id="ham" class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navbar">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">About</a></li>  
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#services">Services</a></li>  
                 </ul>
             </nav>
         </header>
@@ -28,25 +31,29 @@
             <h1>Bolleoppskrifter</h1>
             <a href="#" class="black-btn">Read more</a>
         </section>
-        <section>
-            <img src="£" alt="">
-            <h2>Lorum ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <section class="flex-section">
+            <img src="https://placehold.co/600x400" alt="Grå placeholder">
+            <section>
+                <h2>Lorum ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
         </section>
-        <section>
-            <img src="£" alt="">
-            <h2>Lorum ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <section class="flex-section right">
+            <img src="https://placehold.co/600x400" alt="Grå placeholder">
+            <section>
+                <h2>Lorum ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
         </section>
-        <section>
+        <section id="services">
             <h2>Services</h2>
             <article>
                 <h3>Lorum ipsum</h3>
@@ -65,9 +72,22 @@
             </article>
 
             </section>
-    </main>
-    <footer>
+        </main>
+        <footer>
 
-    </footer>
-</body>
+        </footer>
+        </div>
+        <script>
+            let x = document.querySelector(".navbar")
+
+            document.getElementById("ham").addEventListener("click", (e) =>{
+                if(x.className === "navbar") {
+                    x.className += " responsive";
+                }else{
+                    x.className = "navbar"
+                }
+            })
+
+        </script>
+    </body>
 </html>
